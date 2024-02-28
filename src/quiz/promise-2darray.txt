@@ -1,1 +1,3 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+The code in the executor function gets executed first and then the async function settimeout will be run asynchornously in the event loop. Second while the settimeout is running in worker thread second call of the function is run in the same way as the first call but the second runs faster as there is no need for settimeout function so it returns quickly and prints its error.
